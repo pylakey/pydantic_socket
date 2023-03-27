@@ -19,4 +19,3 @@ jobs:
         with:
           pypi_token: ${{ secrets.PYPI_API_TOKEN }}
           ignore_dev_requirements: true
-          python_version: 3.10
