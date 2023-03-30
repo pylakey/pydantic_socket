@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pydantic_socket"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simple TCP socket client and server with Pydantic models"
 authors = ["pylakey <pylakey@protonmail.com>"]
 license = "MIT"

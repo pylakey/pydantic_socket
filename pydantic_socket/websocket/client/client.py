@@ -1,4 +1,5 @@
 import asyncio
+from enum import Enum
 from typing import (
     Any,
     Callable,
@@ -107,7 +108,8 @@ class Client(BaseClient):
         return True
 
     def set_action_handler(self, action_type: ActionType, handler: ClientActionHandler):
-        self.handlers[str(action_type)] = handler
+        action_type = str(action_type.value) if isinstance(action_type, Enum) else str(action_type)
+        self.handlers[action_type] = handler
 
     def action_handler(self, action_type: ActionType):
         def decorator(func: ClientActionHandler) -> ClientActionHandler:
